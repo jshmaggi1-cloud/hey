@@ -3,8 +3,8 @@ window.onload = () => {
   const canvas = document.getElementById("scratch");
   const ctx = canvas.getContext("2d");
   const hint = document.querySelector(".hint");
-  initScratch();
-
+  setTimeout(initScratch, 100);
+  
   const scratchSound = new Audio("https://www.soundjay.com/human_c2026/sounds/baby-laughing-06.mp3");
   scratchSound.volume = 0.19;
 
