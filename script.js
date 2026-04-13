@@ -36,7 +36,7 @@ window.onload = () => {
       const y = Math.random() * canvas.height;
       const size = Math.random() * 1.9;
 
-      ctx.fillStyle = `rgb(${820 + Math.random()*50}, ${190 + Math.random()*30}, ${90 + Math.random()*20})`;
+      ctx.fillStyle = `rgb(${220 + Math.random()*35}, ${190 + Math.random()*30}, ${90 + Math.random()*20})`;
       ctx.fillRect(x, y, size, size);
     }
 
