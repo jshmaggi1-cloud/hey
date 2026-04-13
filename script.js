@@ -31,7 +31,7 @@ window.onload = () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // glitter
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 8000; i++) {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const size = Math.random() * 1.9;
@@ -167,5 +167,5 @@ window.onload = () => {
 };
 
 window.addEventListener("resize", () => {
-  initScratch();
+  setTimeout(initScratch, 100);
 });
