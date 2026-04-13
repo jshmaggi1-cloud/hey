@@ -97,17 +97,18 @@ body {
 
 /* CARD */
 .card {
-  position: relative;
-  width: 80vw;
-  max-width: 320px;
-  aspect-ratio: 3 / 4;
-  
-  /*Heart shape */
+    width: min(92vw, 70vh);
+  height: min(92vw, 70vh);
+
+  max-width: none;
+  max-height: none;
+
   clip-path: path("M150 260 C -150 100, 150 -50, 150 70 C 150 -50, 450 100, 150 260");
-  
-  background: transparent;
+
+  position: relative;
   overflow: hidden;
-  isolation: isolate; /* THIS FIXES IT */
+  isolation: isolate;
+
   transform: translateX(8%);
   will-change: transform;
 
