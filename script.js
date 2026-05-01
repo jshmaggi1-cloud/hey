@@ -3,8 +3,8 @@ window.onload = () => {
   const canvas = document.getElementById("scratch");
   const ctx = canvas.getContext("2d");
   const hint = document.querySelector(".hint");
-  setTimeout(initScratch, 100);
-  
+  initScratch();
+
   const scratchSound = new Audio("https://www.soundjay.com/human_c2026/sounds/baby-laughing-06.mp3");
   scratchSound.volume = 0.19;
 
@@ -31,12 +31,12 @@ window.onload = () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // glitter
-    for (let i = 0; i < 8000; i++) {
+    for (let i = 0; i < 100000; i++) {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const size = Math.random() * 1.9;
 
-      ctx.fillStyle = `rgb(${220 + Math.random()*35}, ${190 + Math.random()*30}, ${90 + Math.random()*20})`;
+      ctx.fillStyle = `rgb(${820 + Math.random()*50}, ${190 + Math.random()*30}, ${90 + Math.random()*20})`;
       ctx.fillRect(x, y, size, size);
     }
 
@@ -113,7 +113,7 @@ window.onload = () => {
     if (shimmer) shimmer.style.opacity = "0";
 
     ctx.beginPath();
-    ctx.arc(pos.x, pos.y, 22, 0, Math.PI * 2);
+    ctx.arc(pos.x, pos.y, 40, 0, Math.PI * 2);
     ctx.fill();
 
     scratchCount++;
@@ -166,6 +166,6 @@ window.onload = () => {
   canvas.addEventListener("touchmove", scratch);
 };
 
-window.addEventListener("resize", () => {
-  setTimeout(initScratch, 100);
+window.addEventListener("load", () => {
+  setTimeout(initScratch, 120);
 });
